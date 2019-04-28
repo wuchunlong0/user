@@ -1,0 +1,17 @@
+{% extends "home/__base__.html" %}
+{% block content %}
+  <table>
+      <tr>
+          <td>姓名</td>
+          <td>年龄</td>
+          <td>性别</td>
+      </tr>
+      {% for student_obj in students_obj %}
+      <tr>
+          <td>{{ student_obj.name }}</td>
+          <td>{{ student_obj.age }}</td>
+          <td>{{ student_obj.get_sex_display }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+{% endblock %}
